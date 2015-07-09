@@ -1,0 +1,104 @@
+.ui-autocomplete-multi {
+    position: relative;
+    list-style: none;
+    margin: 0;
+    padding: 3px;
+    text-indent: 0;
+    cursor: text;
+    background: #fff;
+    border: 1px solid #bbb;
+}
+
+.ui-autocomplete-multi input {
+    border: none;
+    background: none;
+    margin: 5px 2px;
+    padding: 0;
+}
+
+.ui-autocomplete-multi input:focus {
+    outline: none;
+}
+
+.ui-autocomplete-multi-bit {
+    background: #EFF2F7;
+    border: 1px solid #CCD5E4;
+    border-radius: 5px;
+    padding: 0 3px;
+    margin: 2px;
+    cursor: default;
+}
+
+.ui-autocomplete-multi-bit.ui-state-focus {
+    background: #5670A6;
+    border-color: transparent;
+}
+
+.ui-autocomplete-multi-bit .ui-icon-close {
+    float: right;
+    margin: 1px 0;
+    cursor: pointer;
+}
+
+.ui-autocomplete-multi-bit,
+.ui-autocomplete-multi-input-bit {
+    float: left;
+}
+
+.ui-autocomplete-multi-loading {
+    background: url(../../images/loading-small.gif) no-repeat;
+    width: 16px;
+    height: 16px;
+    float: right;
+    margin: 5px;
+    z-index: 1004;
+}
+
+.ui-menu .ui-menu-item.ui-autocomplete-multi-noresults a.ui-state-hover,
+.ui-menu .ui-menu-item.ui-autocomplete-multi-noresults a.ui-state-active {
+    background: none;
+    border-color: transparent;
+    color: #4f4f4f;
+    text-shadow: none;
+}
+
+.ui-menu .ui-menu-item.ui-autocomplete-multi-addnew {
+    margin-top: 1px;
+}
+
+.ui-autocomplete-multi .ui-menu {
+    width: 100%;
+    max-height: 200px;
+    overflow: auto;
+    overflow-x: hidden;
+}
+
+.autocomplete-result-picture {
+    float: left;
+}
+
+.autocomplete-result-picture img {
+    width: 40px;
+}
+
+.autocomplete-result-info {
+    margin-left: 45px;
+}
+
+.autocomplete-result-type {
+    font-size: 11px;
+}
+
+.autocomplete-result-name {
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.autocomplete-result-email {
+    color: #ddd;
+    font-size: 12px;
+}
+
+.include-fb-wrapper {
+    text-align: center;
+}

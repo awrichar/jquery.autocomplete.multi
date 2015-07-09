@@ -1,0 +1,27 @@
+{
+  "name": "jquery.autocomplete.multi",
+  "version": "1.0.0",
+  "description": "jQuery autocomplete widget that allows selecting multiple values ",
+  "main": "jquery.autocomplete.multi.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/awrichar/jquery.autocomplete.multi.git"
+  },
+  "keywords": [
+    "jquery-plugin",
+    "ecosystem:jquery",
+    "autocomplete",
+    "auto-complete",
+    "multiple",
+    "select"
+  ],
+  "author": "Andrew Richardson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/awrichar/jquery.autocomplete.multi/issues"
+  },
+  "homepage": "https://github.com/awrichar/jquery.autocomplete.multi#readme"
+}

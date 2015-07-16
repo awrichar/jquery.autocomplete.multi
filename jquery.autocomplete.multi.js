@@ -15,12 +15,53 @@
     /**
      * Multi-select Autocomplete Box
      *
+     * Initialization:
+     *   $('select#my-select').autocomplete_multi();
+     *
+     * Can be called on any HTML element - the element will be removed from
+     * the DOM and replaced with an autocomplete edit box. Three common uses:
+     *   1) (Most common) Replace a <select> element - the options in the
+     *      select will be used to populate the autocomplete suggestions,
+     *      unless a custom "source" option is provided.
+     *
+     *   2) Replace a text input - the initial value of the text input
+     *      should be a JSON string in the format expected by Autocomplete:
+     *      [{'label': 'item1', 'value': 1}, {'label': 'item2', 'value': 2}]
+     *
+     *   3) Replace any element and specify a custom "source" option
+     *      (just like the regular Autocomplete widget).
+     *
+     * Options:
+     *   excludeDuplicates - don't allow the same item to be selected twice
+     *   sortable - allow elements to be reordered after they are added
+     *   title - hint text to show in the edit field
+     *   inputWidth - width of the edit field
+     *   noResultsText - text to display when no results are found
+     *   addNewText - text for the "Add new" option (when enabled)
+     *   maxItems - maximum items that can be selected
+     *
+     * Callbacks:
+     *   renderItem(item)
+     *     Receives an item in the format {'label': 'item1', 'value': 1}
+     *     Should return an HTML element representing the item in the
+     *     Autocomplete list.
+     *
+     *   addNew(text, callback)
+     *     If defined, enables the "Add new" option in the autocomplete list.
+     *     When that option is selected, this method will be invoked with the
+     *     text currently entered in the edit box.
+     *     That text can be used to populate a form or dialog allowing the
+     *     user to actually create the new item. Once created, this method
+     *     should invoke callback(item), where item is in the format
+     *     {'label': 'item1', 'value': 1}. The item will then be added to
+     *     the Autocomplete list.
+     *
      * Methods:
-     *   add(item)
-     *   remove(bit)
-     *   removeAll()
-     *   clearInput()
-     *   focusBit(bit)
+     *   add(item) - add a new bit for the given item into the control
+     *   remove(bit) - remove the given bit (DOM element) from the control
+     *   removeAll() - remove all bits from the control
+     *   clearInput() - clear the text in the edit box
+     *   focusBit(bit) - set focus to the specified bit (DOM element)
      */
     $.widget("ui.autocomplete_multi", {
         options: {
@@ -28,6 +69,8 @@
             autoFocus: true,
             minLength: 1,
             delay: 400,
+            /* most other standard Autocomplete options are
+               supported and will be passed through */
 
             // Custom options
             excludeDuplicates: true,

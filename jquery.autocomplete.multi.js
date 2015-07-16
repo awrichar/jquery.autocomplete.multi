@@ -34,7 +34,7 @@
      * Options:
      *   excludeDuplicates - don't allow the same item to be selected twice
      *   sortable - allow elements to be reordered after they are added
-     *   title - hint text to show in the edit field
+     *   placeholder - hint text to show in the edit field
      *   inputWidth - width of the edit field
      *   noResultsText - text to display when no results are found
      *   addNewText - text for the "Add new" option (when enabled)
@@ -75,7 +75,7 @@
             // Custom options
             excludeDuplicates: true,
             sortable: false,
-            title: "",
+            placeholder: "",
             inputWidth: 50,
             noResultsText: "No results",
             addNewText: "Add new...",
@@ -235,8 +235,8 @@
             }
 
             // Show hint text
-            if(o.title) {
-                self.input.attr('title', o.title).hint();
+            if(o.placeholder) {
+                self.input.attr('placeholder', o.placeholder);
             }
         },
 
